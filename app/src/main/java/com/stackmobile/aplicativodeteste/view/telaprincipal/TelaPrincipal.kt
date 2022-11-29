@@ -70,6 +70,18 @@ class TelaPrincipal : AppCompatActivity() {
             }
         }
 
+        binding.btDeleteDB.setOnClickListener { view ->
+            db.collection("Users").document("3").delete().addOnCompleteListener {
+                val snackbar = Snackbar.make(view, "Success on delete record!", Snackbar.LENGTH_SHORT)
+                snackbar.setBackgroundTint(Color.BLUE)
+                snackbar.show()
+            }.addOnFailureListener {
+                val snackbar = Snackbar.make(view, "Failure on delete record!", Snackbar.LENGTH_SHORT)
+                snackbar.setBackgroundTint(Color.RED)
+                snackbar.show()
+            }
+        }
+
         binding.btReadDB.setOnClickListener {
             db.collection("Users").document("3").addSnapshotListener { document, error ->
                 if (document != null) {
