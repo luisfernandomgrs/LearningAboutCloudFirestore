@@ -35,4 +35,27 @@
         android:layout_marginTop="20dp"
         />
 
+    <Button
+        android:id="@+id/bt_readDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ler Dados..."
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txtResultDataFromDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wait read data from cloudfirestore"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
+
 </LinearLayout>

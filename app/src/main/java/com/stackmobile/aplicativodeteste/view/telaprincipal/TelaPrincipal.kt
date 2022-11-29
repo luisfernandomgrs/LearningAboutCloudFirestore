@@ -48,5 +48,18 @@ class TelaPrincipal : AppCompatActivity() {
                 snackbar.show()
             }
         }
+
+        binding.btReadDB.setOnClickListener {
+            db.collection("Users").document("2").addSnapshotListener { document, error ->
+                if (document != null) {
+                    //val createAt = document.getLong("createAt")
+
+                    binding.txtResultDataFromDB.text = "Name: " + document.getString("name") + "\n" +
+                            "lastName: " + document.getString("lastName") + "\n" +
+                            "E-mail: " + document.getString("email") + "\n" +
+                            "Create At: " + document.getLong("createAt").toString()
+                }
+            }
+        }
     }
 }
