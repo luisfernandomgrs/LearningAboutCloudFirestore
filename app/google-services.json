@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "856114836983",
+    "project_id": "aplicativo-de-teste-40f7c",
+    "storage_bucket": "aplicativo-de-teste-40f7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856114836983:android:59e7fbe60477bcc377aaf2",
+        "android_client_info": {
+          "package_name": "com.stackmobile.aplicativodeteste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856114836983-4u33bu4lhj1bf88lq28htf8odg91fqce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa4HvNS99I5MSErTAQtxiRd15A-uXMqfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856114836983-4u33bu4lhj1bf88lq28htf8odg91fqce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

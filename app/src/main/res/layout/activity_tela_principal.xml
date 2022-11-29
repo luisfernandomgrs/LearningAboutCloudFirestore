@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.telaprincipal.TelaPrincipal">
+
+    <Button
+        android:id="@+id/bt_logouth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/texto_botao_logouth"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/bt_updateDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atualizar Dados"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>
