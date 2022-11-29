@@ -22,18 +22,30 @@
         />
 
     <Button
-        android:id="@+id/bt_updateDB"
+        android:id="@+id/bt_insertDB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Atualizar Dados"
+        android:text="Inserindo Dados"
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:backgroundTint="@color/black"
         android:layout_gravity="center"
         android:padding="15dp"
-        android:layout_marginTop="20dp"
-        />
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/bt_updateDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atualizando Dados"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:id="@+id/bt_readDB"
@@ -46,8 +58,7 @@
         android:backgroundTint="@color/black"
         android:layout_gravity="center"
         android:padding="15dp"
-        android:layout_marginTop="20dp"
-        />
+        android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/txtResultDataFromDB"

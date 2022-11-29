@@ -29,28 +29,49 @@ class TelaPrincipal : AppCompatActivity() {
             finish()
         }
 
-        binding.btUpdateDB.setOnClickListener { view ->
+        binding.btInsertDB.setOnClickListener { view ->
             val usersMap = hashMapOf(
-                "name" to "Alieware R7",
-                "lastName" to "Very Goog Boy",
-                "email" to "aliewarer7@gmail.com",
+                "name" to "XPS 8940",
+                "lastName" to "Desktop",
+                "email" to "xps8940@gmail.com",
                 "createAt" to 2022
             )
-            db.collection("Users").document("2").set(usersMap).addOnCompleteListener {
+            db.collection("Users").document("3").set(usersMap).addOnCompleteListener {
                 Log.d("db", "Success on create register to new data.")
 
                 val snackbar = Snackbar.make(view, "Success on create or update record!", Snackbar.LENGTH_SHORT)
                 snackbar.setBackgroundTint(Color.BLUE)
                 snackbar.show()
             }.addOnFailureListener {
-                val snackbar = Snackbar.make(view, "Failure on create or update record!", Snackbar.LENGTH_SHORT)
+                val snackbar = Snackbar.make(view, "Failure on create record!", Snackbar.LENGTH_SHORT)
+                snackbar.setBackgroundTint(Color.RED)
+                snackbar.show()
+            }
+        }
+
+        binding.btUpdateDB.setOnClickListener { view ->
+            /*
+            * Multiples fields on Update record
+            * Learning basic CRUD on Cloud Firestore
+             */
+            db.collection("Users")
+                .document("3")
+                .update("name","XPS 8940, RTX 2060",
+                    "createAt", 2021)
+                .addOnCompleteListener {
+
+                    val snackbar = Snackbar.make(view, "Success on update record!", Snackbar.LENGTH_SHORT)
+                    snackbar.setBackgroundTint(Color.BLUE)
+                    snackbar.show()
+            }.addOnFailureListener {
+                val snackbar = Snackbar.make(view, "Failure on update record!", Snackbar.LENGTH_SHORT)
                 snackbar.setBackgroundTint(Color.RED)
                 snackbar.show()
             }
         }
 
         binding.btReadDB.setOnClickListener {
-            db.collection("Users").document("2").addSnapshotListener { document, error ->
+            db.collection("Users").document("3").addSnapshotListener { document, error ->
                 if (document != null) {
                     //val createAt = document.getLong("createAt")
 
